@@ -11,10 +11,11 @@ def clip_values(x, min_val=None, max_val=None):
     returns: an array with the same dimensions of X with values clipped
              to (min_val, max-val)
     """
-
-    # YOUR CODE HERE
-    # Replace None with an appropriate return value
-    return None
+    if min_val:
+        x = np.where(x<min_val, min_val ,x)
+    if max_val:
+        x = np.where(x> max_val, max_val, x)
+    return x
 
 
 #############################################################

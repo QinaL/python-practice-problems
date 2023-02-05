@@ -11,7 +11,14 @@ def select_row_col(x, row_idx=None, col_idx=None):
 
     # YOUR CODE HERE
     # Replace None with an appropriate return value
-    return None
+    if row_idx and col_idx:
+        return x[np.ix_(row_idx, col_idx)]
+    elif row_idx:
+        return x[row_idx]
+    elif col_idx:
+        return x[:,col_idx]
+    else:
+        return x
 
 
 #############################################################

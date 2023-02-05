@@ -11,7 +11,12 @@ def compute_matching_indices(x, y):
 
     # YOUR CODE HERE
     # Replace None with an appropriate return value
-    return None
+    matching = (x==y)
+    # index = []
+    # for i in range(len(matching)):
+    #     if matching[i]:
+    #         index.append(i)
+    return np.arange(len(matching))[matching]
     
 
 #############################################################
