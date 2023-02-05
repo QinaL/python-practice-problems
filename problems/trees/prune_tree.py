@@ -18,7 +18,7 @@ def prune_tree(tree, keys_to_discard):
     new_tree = Tree(tree.key, tree.value)
     for child in tree.children:
         if child.key not in keys_to_discard:
-            new_tree.add_child(prune_tree(child))
+            new_tree.add_child(prune_tree(child, keys_to_discard))
     return new_tree
         
 
